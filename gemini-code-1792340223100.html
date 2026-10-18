@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Sección 12: Relación, Sexualidad y Resumen | El Lugar de Su Presencia</title>
+    
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: #F4F1EA;
+            color: #1E293B;
+            line-height: 1.5;
+            -webkit-tap-highlight-color: transparent;
+            padding-bottom: 95px;
+        }
+        header {
+            background: linear-gradient(135deg, #0F294A 0%, #1E293B 50%, #7C2D12 100%);
+            color: #ffffff;
+            padding: 22px 16px;
+            text-align: center;
+            border-bottom: 4px solid #C2410C;
+            position: sticky;
+            top: 0;
+            z-index: 30;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        header h1 {
+            font-size: 1.35rem;
+            font-weight: 800;
+            margin: 6px 0 2px 0;
+            color: #ffffff;
+            line-height: 1.25;
+        }
+        header p {
+            font-size: 0.8rem;
+            color: #FED7AA;
+            font-weight: 300;
+        }
+        .badge {
+            display: inline-block;
+            background-color: rgba(217, 119, 6, 0.25);
+            color: #FDE68A;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border: 1px solid rgba(217, 119, 6, 0.4);
+        }
+        main {
+            max-width: 720px;
+            margin: 16px auto;
+            padding: 0 12px;
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 16px;
+            border: 1px solid #E2E8F0;
+            padding: 16px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+        }
+        .card h2, .card h3 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #0F294A;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .info-box {
+            background: linear-gradient(90deg, #EFF6FF 0%, #FFF7ED 100%);
+            border-left: 4px solid #C2410C;
+            padding: 12px;
+            border-radius: 0 12px 12px 0;
+            font-size: 0.8rem;
+            color: #1E293B;
+            margin-top: 10px;
+        }
+        label {
+            display: block;
+            font-size: 0.825rem;
+            font-weight: 600;
+            color: #334155;
+            margin-bottom: 4px;
+            line-height: 1.35;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px 12px;
+            border-radius: 10px;
+            border: 1px solid #CBD5E1;
+            font-size: 16px !important;
+            background-color: #FAFAFA;
+            margin-top: 4px;
+            margin-bottom: 8px;
+            font-family: inherit;
+        }
+        input[type="text"]:focus, textarea:focus {
+            outline: none;
+            border-color: #C2410C;
+            background-color: #ffffff;
+            box-shadow: 0 0 0 3px rgba(194, 65, 12, 0.15);
+        }
+        .radio-tile-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .radio-tile {
+            border: 1px solid #E2E8F0;
+            border-radius: 12px;
+            padding: 12px;
+            text-align: center;
+            cursor: pointer;
+            background-color: #FAFAFA;
+            font-size: 0.825rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            min-height: 48px;
+        }
+        .radio-tile input { accent-color: #C2410C; }
+        .checkbox-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #E2E8F0;
+            background-color: #FAFAFA;
+            margin-bottom: 6px;
+            font-size: 0.78rem;
+        }
+        .checkbox-item input {
+            margin-top: 3px;
+            width: 18px;
+            height: 18px;
+            accent-color: #C2410C;
+        }
+        .btn-whatsapp {
+            width: 100%;
+            background-color: #059669;
+            color: #ffffff;
+            font-weight: 700;
+            padding: 14px 16px;
+            border-radius: 12px;
+            border: none;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+            text-decoration: none;
+        }
+        .btn-whatsapp:active {
+            transform: scale(0.98);
+        }
+        .sticky-bottom-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(15, 23, 42, 0.96);
+            backdrop-filter: blur(8px);
+            padding: 10px 14px;
+            border-top: 1px solid #334155;
+            z-index: 50;
+        }
+        #toast {
+            position: fixed;
+            bottom: 80px;
+            left: 16px;
+            right: 16px;
+            background-color: #0F172A;
+            color: #ffffff;
+            padding: 12px 16px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            border: 1px solid #334155;
+            display: none;
+            z-index: 100;
+            align-items: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="badge">
+            <i class="fa-solid fa-users"></i> Grupo de Conexión
+        </div>
+        <h1>Taller de Matrimonios: "Amor y Respeto"</h1>
+        <p>Iglesia El Lugar de Su Presencia &bull; Red de Parejas con Hijos Adultos</p>
+        <div style="margin-top: 8px; font-size: 0.725rem; color: #FDE68A; opacity: 0.9;">
+            <span><i class="fa-regular fa-bookmark"></i> Sección Doce: Caps. 20, 21 y 22</span> &bull; 
+            <span><i class="fa-solid fa-fire-flame-curved text-amber-400"></i> "Relación, Sexualidad & Resumen"</span>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="card">
+            <h2>
+                <span><i class="fa-solid fa-heart" style="color: #C2410C;"></i> SECCIÓN DOCE</span>
+            </h2>
+            <p style="font-size: 0.825rem; color: #334155; margin-bottom: 8px;">
+                Esta sección abarca 3 capítulos fundamentales: <strong>Cap. 20</strong> (Amistad hombro a hombro), <strong>Cap. 21</strong> (Sexualidad en el matrimonio) y <strong>Cap. 22</strong> (Resumen del Ciclo Energizante).
+            </p>
+            <div class="info-box">
+                <p style="font-weight: 700; color: #0F294A;">💍 Del Ciclo Energizante al Ciclo Gratificante:</p>
+                <p>El <strong>Amor</strong> incondicional del Esposo refleja el Amor de Cristo por la iglesia, y el <strong>Respeto</strong> incondicional de la Esposa refleja la reverencia de la iglesia por Cristo.</p>
+            </div>
+        </div>
+
+        <form id="evaluationForm" onsubmit="event.preventDefault();">
+
+            <!-- DATOS DE REGISTRO -->
+            <div class="card">
+                <h3>
+                    <span>Datos de Registro</span>
+                    <span style="font-size: 0.7rem; color: #C2410C;">* Obligatorio</span>
+                </h3>
+
+                <div style="margin-bottom: 12px;">
+                    <label>Usted es: *</label>
+                    <div class="radio-tile-group">
+                        <label class="radio-tile">
+                            <input type="radio" name="rol" value="Esposo" required> Esposo (Azul)
+                        </label>
+                        <label class="radio-tile">
+                            <input type="radio" name="rol" value="Esposa" required> Esposa (Rosa)
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="nombre">Tu Nombre Completo *</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre y apellido...">
+                </div>
+
+                <div>
+                    <label for="conyuge">Nombre de tu Cónyuge *</label>
+                    <input type="text" id="conyuge" name="conyuge" required placeholder="Nombre de tu cónyuge...">
+                </div>
+            </div>
+
+            <!-- CAPÍTULO 20 -->
+            <div class="card">
+                <h3 style="color: #9A3412; border-bottom: 1px solid #FED7AA; padding-bottom: 6px;">
+                    Capítulo 20: “Relación: valore su deseo de una amistad hombro a hombro”
+                </h3>
+
+                <!-- P1 -->
+                <div style="margin-bottom: 16px;">
+                    <label>1. En su matrimonio, ¿él solo quiere que ella “esté con él” conversando poco o nada?</label>
+                    <div style="display: flex; gap: 14px; font-size: 0.78rem; margin-top: 6px;">
+                        <label><input type="radio" name="q1_hombro" value="Siempre"> Siempre</label>
+                        <label><input type="radio" name="q1_hombro" value="Algunas veces"> Algunas veces</label>
+                        <label><input type="radio" name="q1_hombro" value="Nunca"> Nunca</label>
+                    </div>
+                </div>
+
+                <!-- P2 -->
+                <div style="margin-bottom: 16px;">
+                    <label>2. “Cómo el ‘no hacer nada’ puede edificar una relación”. ¿Cuáles son las razones por las que una <strong>Esposa</strong> puede tener problemas con el hecho de simplemente sentarse al lado de su <strong>Esposo</strong> que está mirando TV o de verlo trabajar en un proyecto?</label>
+                    <textarea name="q2_nodada" rows="2" placeholder="Escriba su respuesta..."></textarea>
+                </div>
+
+                <!-- P3 -->
+                <div>
+                    <label>3. “Esposas, sean pacientes con el: ‘Sólo siéntate a mi lado’”. ¿Cuál de las siguientes oraciones le ayudará a comprender mejor la necesidad masculina de estar hombro a hombro?</label>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="q3_items" value="A. Cuando el Esposo llama a la Esposa sólo para que se siente a su lado, él está trabajando en su relación de una manera significativa.">
+                        <span>A. Cuando el <strong>Esposo</strong> llama a la <strong>Esposa</strong> “sólo para que se siente a su lado”, él está trabajando en su relación de una manera significativa... Así es como él se comunica.</span>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="q3_items" value="B. Los hombres prefieren la comunicación hombro a hombro en vez de cara a cara, y esto puede ocurrir de las maneras más sencillas.">
+                        <span>B. Los hombres prefieren la comunicación hombro a hombro en vez de cara a cara, y esto puede ocurrir de las maneras más sencillas.</span>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="q3_items" value="C. En la mayoría de los matrimonios hay una verdadera diferencia en las necesidades básicas; debe haber concesiones mutuas.">
+                        <span>C. En la mayoría de los matrimonios hay una verdadera diferencia en las necesidades básicas; obviamente, debe haber concesiones mutuas como en otras áreas.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CAPÍTULO 21 -->
+            <div class="card">
+                <h3 style="color: #C2410C; border-bottom: 1px solid #FFEDD5; padding-bottom: 6px;">
+                    Capítulo 21: “Sexualidad: valore su deseo de intimidad sexual”
+                </h3>
+
+                <!-- P4 -->
+                <div style="margin-bottom: 16px;">
+                    <label>4. “Patear al diablo fuera de la cama”. ¿Cuáles de las siguientes afirmaciones se relacionan más directamente con usted y su matrimonio?</label>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="q4_items" value="A. Algunas veces ha habido discusiones que no eran por un problema específico, sino por falta de sexo.">
+                        <span>A. Algunas veces ha habido discusiones que no eran por un problema específico, la cuestión era por falta de sexo.</span>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="q4_items" value="B. Comprendemos que: El SEXO para él y AFECTO para ella es una calle de circulación en ambos sentidos.">
+                        <span>B. Comprendemos que: “El SEXO para él y AFECTO para ella es una calle de circulación en ambos sentidos”.</span>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="q4_items" value="C. El Sexo simboliza la necesidad más profunda para el Esposo de Respeto.">
+                        <span>C. “El Sexo simboliza la necesidad más profunda para el <strong>Esposo</strong> de <strong>Respeto</strong>”.</span>
+                    </div>
+                    <p style="font-size: 0.75rem; color: #64748B; margin-top: 6px;">D. Complete la oración: En nuestro matrimonio, el sexo es...</p>
+                    <input type="text" name="q4_d_completar" placeholder="En nuestro matrimonio, el sexo es...">
+                </div>
+
+                <!-- P5 -->
+                <div style="margin-bottom: 16px;">
+                    <label>5. “La regla de oro también funciona con el sexo”. Ella desea sentir intimidad emocional para conectarse sexualmente; él desea intimidad sexual para conectarse emocionalmente. ¿Han llegado a un punto donde comparten abiertamente sus necesidades sin pisarse la manguera de oxígeno?</label>
+                    <textarea name="q5_reglaoro" rows="2" placeholder="Escriban cómo manejan este diálogo (un café en la cama)..."></textarea>
+                </div>
+
+                <!-- P6 -->
+                <div style="margin-bottom: 16px;">
+                    <label>6. “Una dosis de Respeto es más que una dosis de Viagra cada día”. Los casos de adulterio son por falta de sexo y respeto. ¿Qué nos dice esto acerca del vínculo entre Sexo y Respeto?</label>
+                    <textarea name="q6_vinculo" rows="2" placeholder="Escriba su reflexión..."></textarea>
+                </div>
+
+                <!-- P7 -->
+                <div style="margin-bottom: 16px;">
+                    <label>7. “Me agradas, eres amoroso, respetado, deseado y necesitado”. ¿Estás comunicando estos aspectos positivos a tu cónyuge?</label>
+                    <textarea name="q7_comunicando" rows="2" placeholder="Escriba cómo lo comunica..."></textarea>
+                </div>
+
+                <!-- P8 -->
+                <div style="margin-bottom: 16px;">
+                    <label>8. “Si él me ama, ¿cómo puede ser tentado por otras mujeres?”. ¿Cuáles afirmaciones le resultan más útiles como cónyuge?</label>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="q8_items" value="A. Dicho sencillamente, un hombre es sensible a lo que ve. Necesita la comprensión de su Esposa en sus luchas.">
+                        <span>A. Dicho sencillamente, un hombre es sensible a lo que ve. Necesita la comprensión de su <strong>Esposa</strong> en sus luchas.</span>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="q8_items" value="B. Una Esposa anhela cercanía y franqueza: 1. Darle el sexo que necesita aunque no esté de humor. 2. Comprender que él es tentado de formas que ella no entiende.">
+                        <span>B. Una <strong>Esposa</strong> busca cercanía: 1. Darle el sexo que necesita aunque no esté de humor. 2. Comprender que él es tentado de maneras que ella no entiende.</span>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="q8_items" value="C. Si su Esposo es típico, tiene una necesidad que usted no tiene. Al satisfacerla, encontrará que él se extiende para satisfacer las suyas.">
+                        <span>C. Si su <strong>Esposo</strong> es típico, tiene una necesidad que usted no tiene. Al satisfacerla con amor, él se extenderá para satisfacer las suyas.</span>
+                    </div>
+                </div>
+
+                <!-- P10 -->
+                <div>
+                    <label>9. Él sentirá que usted aprecia su deseo de intimidad sexual cuando:</label>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="q10_items" value="A. Usted le responda a su necesidad sexual con mayor frecuencia.">
+                        <span>A. Usted le responda con su necesidad sexual con mayor frecuencia.</span>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="q10_items" value="B. Usted comprenda su necesidad sexual con el mismo valor con que usted necesita las emocionales.">
+                        <span>B. Usted comprenda su necesidad sexual, tal como usted necesita las emocionales.</span>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="q10_items" value="C. Usted le permita hablar de sus luchas sin juzgarlo.">
+                        <span>C. Usted le permita hablar de sus luchas sin juzgarlo.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CAPÍTULO 22 -->
+            <div class="card">
+                <h3 style="color: #1E3A8A; border-bottom: 1px solid #BFDBFE; padding-bottom: 6px;">
+                    Capítulo 22: “El Ciclo Energizante funcionará si usted lo practica” (Resumen)
+                </h3>
+
+                <!-- P11 (Esposo) -->
+                <div style="margin-bottom: 16px;">
+                    <label>10. Esposo: ¿Cómo le demuestra Amor a su Esposa? (Marque las que ya practica):</label>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="q11_esposo_items" value="Intimidad: Hablar con ella para asegurarle mi amor continuo.">
+                        <span>• <strong>Intimidad:</strong> Hablar con ella para asegurarle mi amor continuo.</span>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="q11_esposo_items" value="Apertura: Comparto mis pensamientos y soy comunicativo con ella.">
+                        <span>• <strong>Apertura:</strong> Comparto mis pensamientos y me esfuerzo por ser más comunicativo.</span>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="q11_esposo_items" value="Comprensión: Cuido de no arreglarlo todo de afán; escucho sus emociones.">
+                        <span>• <strong>Comprensión:</strong> Cuido de no arreglarlo todo de afán; escucho y valido sus emociones.</span>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="q11_esposo_items" value="Reconciliación: Dispuesto a resolver problemas sin decir pasemos al siguiente tema.">
+                        <span>• <strong>Reconciliación:</strong> Siempre dispuesto a resolver problemas sin decir "pasemos al siguiente tema".</span>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="q11_esposo_items" value="Lealtad: Le ratifico que seré fiel siempre y que es el único amor de mi vida.">
+                        <span>• <strong>Lealtad:</strong> Le ratifico constantemente que seré fiel siempre y que es mi único amor.</span>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="q11_esposo_items" value="Estima: Le hago saber que la valoro y que lo que hace es importante para mí.">
+                        <span>• <strong>Estima:</strong> Le hago saber siempre que la aprecio, la honro y no puedo vivir sin ella.</span>
+                    </div>
+                </div>
+
+                <!-- P12 (Esposa) -->
+                <div>
+                    <label>11. Esposa: ¿Cómo le demuestra Respeto a su Esposo? (Marque las que ya practica):</label>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="q12_esposa_items" value="Conquista: Lo apoyo en su trabajo y valoro sus esfuerzos diarios.">
+                        <span>• <strong>Conquista:</strong> Lo apoyo en su trabajo y valoro sus esfuerzos diarios.</span>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="q12_esposa_items" value="Jerarquía: Le hago saber que lo respeto y apoyo su esfuerzo por dirigir y proteger.">
+                        <span>• <strong>Jerarquía:</strong> Le hago saber que lo respeto y apoyo su esfuerzo por dirigir y proteger el hogar.</span>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="q12_esposa_items" value="Autoridad: Reconozco que él tiene la responsabilidad principal de morir por mí.">
+                        <span>• <strong>Autoridad:</strong> Reconozco que él tiene la responsabilidad de entregar su vida por mí y le permito liderar.</span>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="q12_esposa_items" value="Discernimiento: Confío en su habilidad para arreglar las cosas y ofrecer soluciones.">
+                        <span>• <strong>Discernimiento:</strong> Confío en su habilidad para analizar y ofrecer soluciones, sin depender solo de mi intuición.</span>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="q12_esposa_items" value="Relación: Paso tiempo hombro a hombro; soy su amiga además de su amante.">
+                        <span>• <strong>Relación:</strong> Paso tiempo hombro a hombro siempre que puedo; soy su amiga además de su amante.</span>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="q12_esposa_items" value="Sexualidad: Honro su necesidad sexual con ternura y gozo.">
+                        <span>• <strong>Sexualidad:</strong> Honro su necesidad sexual con comprensión, ternura y gozo.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ENVÍO PARA WHATSAPP -->
+            <div class="card" style="background-color: #0F172A; color: #ffffff; border-color: #334155;">
+                <h3 style="color: #34D399; border-bottom-color: #1E293B;">
+                    <span><i class="fa-brands fa-whatsapp"></i> Envío para WhatsApp</span>
+                </h3>
+                <p style="font-size: 0.78rem; color: #CBD5E1; margin-bottom: 12px;">
+                    Al terminar, presiona el botón para copiar tus respuestas con formato especial y abrir directamente WhatsApp para tu Grupo de Cuatro.
+                </p>
+
+                <button type="button" class="btn-whatsapp" onclick="handleWhatsAppSubmission()">
+                    <i class="fa-brands fa-whatsapp" style="font-size: 1.4rem;"></i> Copiar y Enviar a WhatsApp
+                </button>
+            </div>
+
+        </form>
+
+    </main>
+
+    <!-- Barra flotante móvil -->
+    <div class="sticky-bottom-bar">
+        <button type="button" class="btn-whatsapp" onclick="handleWhatsAppSubmission()">
+            <i class="fa-brands fa-whatsapp" style="font-size: 1.2rem;"></i>
+            <span>Copiar y Enviar a WhatsApp</span>
+        </button>
+    </div>
+
+    <!-- Notificación Toast -->
+    <div id="toast">
+        <i id="toastIcon" class="fa-solid fa-circle-check" style="color: #34D399; font-size: 1.2rem;"></i>
+        <span id="toastMsg">Mensaje...</span>
+    </div>
+
+    <script>
+        function getFormData() {
+            const form = document.getElementById('evaluationForm');
+            const formData = new FormData(form);
+
+            const q3Checked = [];
+            document.querySelectorAll('input[name="q3_items"]:checked').forEach(cb => q3Checked.push(cb.value));
+
+            const q4Checked = [];
+            document.querySelectorAll('input[name="q4_items"]:checked').forEach(cb => q4Checked.push(cb.value));
+
+            const q8Checked = [];
+            document.querySelectorAll('input[name="q8_items"]:checked').forEach(cb => q8Checked.push(cb.value));
+
+            const q10Checked = [];
+            document.querySelectorAll('input[name="q10_items"]:checked').forEach(cb => q10Checked.push(cb.value));
+
+            const q11Checked = [];
+            document.querySelectorAll('input[name="q11_esposo_items"]:checked').forEach(cb => q11Checked.push(cb.value));
+
+            const q12Checked = [];
+            document.querySelectorAll('input[name="q12_esposa_items"]:checked').forEach(cb => q12Checked.push(cb.value));
+
+            return {
+                fecha: new Date().toLocaleString('es-CO'),
+                rol: formData.get('rol') || '',
+                nombre: formData.get('nombre') || '',
+                conyuge: formData.get('conyuge') || '',
+                q1_hombro: formData.get('q1_hombro') || 'S/R',
+                q2_nodada: formData.get('q2_nodada') || '',
+                q3_items: q3Checked.join('\n   • '),
+                q4_items: q4Checked.join('\n   • '),
+                q4_d_completar: formData.get('q4_d_completar') || '',
+                q5_reglaoro: formData.get('q5_reglaoro') || '',
+                q6_vinculo: formData.get('q6_vinculo') || '',
+                q7_comunicando: formData.get('q7_comunicando') || '',
+                q8_items: q8Checked.join('\n   • '),
+                q10_items: q10Checked.join('\n   • '),
+                q11_esposo_items: q11Checked.join('\n   • '),
+                q12_esposa_items: q12Checked.join('\n   • ')
+            };
+        }
+
+        function validateForm(data) {
+            if (!data.rol) {
+                showToast("Por favor seleccione si es Esposo o Esposa.", "error");
+                return false;
+            }
+            if (!data.nombre.trim()) {
+                showToast("Por favor ingrese su Nombre Completo.", "error");
+                document.getElementById('nombre').focus();
+                return false;
+            }
+            if (!data.conyuge.trim()) {
+                showToast("Por favor ingrese el Nombre de su Cónyuge.", "error");
+                document.getElementById('conyuge').focus();
+                return false;
+            }
+            return true;
+        }
+
+        function buildFormattedMessage(data) {
+            let text = `*GRUPO DE CONEXIÓN*\n`;
+            text += `*Iglesia El Lugar de Su Presencia*\n`;
+            text += `📖 *Sección 12: Caps. 20, 21 y 22 (Relación, Sexualidad & Resumen)*\n`;
+            text += `──────────────────────\n`;
+            text += `👤 *Participante:* ${data.nombre} (${data.rol})\n`;
+            text += `💍 *Cónyuge:* ${data.conyuge}\n`;
+            text += `📅 *Fecha:* ${data.fecha}\n`;
+            text += `──────────────────────\n\n`;
+            text += `*RESPUESTAS:*\n\n`;
+            text += `*1. Amistad hombro a hombro:* ${data.q1_hombro}\n\n`;
+            text += `*2. Dificultad con "no hacer nada":* ${data.q2_nodada || 'S/R'}\n\n`;
+            text += `*3. Comprensión hombro a hombro:*\n   • ${data.q3_items || 'Ninguna seleccionada'}\n\n`;
+            text += `*4. Sexualidad en el matrimonio:*\n   • ${data.q4_items || 'Ninguna seleccionada'}\n   • El sexo es: ${data.q4_d_completar || 'S/R'}\n\n`;
+            text += `*5. Regla de oro en el sexo (diálogo íntimo):* ${data.q5_reglaoro || 'S/R'}\n\n`;
+            text += `*6. Vínculo Sexo y Respeto:* ${data.q6_vinculo || 'S/R'}\n\n`;
+            text += `*7. Comunicar afecto y valor:* ${data.q7_comunicando || 'S/R'}\n\n`;
+            text += `*8. Comprensión de las luchas del varón:*\n   • ${data.q8_items || 'Ninguna seleccionada'}\n\n`;
+            text += `*9. Apreciar la intimidad sexual:*\n   • ${data.q10_items || 'Ninguna seleccionada'}\n\n`;
+            text += `*10. Práctica del Esposo (P-A-R-E-J-A):*\n   • ${data.q11_esposo_items || 'Ninguna seleccionada'}\n\n`;
+            text += `*11. Práctica de la Esposa (C-J-A-D-R-S):*\n   • ${data.q12_esposa_items || 'Ninguna seleccionada'}\n\n`;
+            text += `*Pacto Conyugal:* "El Amor incondicional del Esposo refleja el Amor de Cristo por la iglesia, y el Respeto incondicional de la Esposa refleja la reverencia de la iglesia por Cristo."`;
+            return text;
+        }
+
+        async function copyToClipboardFallback(text) {
+            if (navigator.clipboard && window.isSecureContext) {
+                try {
+                    await navigator.clipboard.writeText(text);
+                    return true;
+                } catch (err) {
+                    console.warn("Fallo navigator.clipboard, recurriendo a fallback...", err);
+                }
+            }
+
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            textArea.style.position = "fixed";
+            textArea.style.left = "-999999px";
+            textArea.style.top = "-999999px";
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            textArea.setSelectionRange(0, 99999);
+
+            let successful = false;
+            try {
+                successful = document.execCommand("copy");
+            } catch (err) {
+                successful = false;
+            }
+            document.body.removeChild(textArea);
+            return successful;
+        }
+
+        async function handleWhatsAppSubmission() {
+            const data = getFormData();
+            if (!validateForm(data)) return;
+
+            const textMessage = buildFormattedMessage(data);
+            const copied = await copyToClipboardFallback(textMessage);
+
+            if (copied) {
+                showToast("¡Respuestas copiadas! Abriendo WhatsApp...", "success");
+            } else {
+                showToast("Abriendo WhatsApp para compartir...", "info");
+            }
+
+            setTimeout(() => {
+                const encodedText = encodeURIComponent(textMessage);
+                window.location.href = `https://api.whatsapp.com/send?text=${encodedText}`;
+            }, 1200);
+        }
+
+        function showToast(msg, type = "success") {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toastMsg');
+            const toastIcon = document.getElementById('toastIcon');
+
+            toastMsg.innerText = msg;
+            if (type === "success") {
+                toastIcon.className = "fa-solid fa-circle-check";
+                toastIcon.style.color = "#34D399";
+            } else if (type === "error") {
+                toastIcon.className = "fa-solid fa-triangle-exclamation";
+                toastIcon.style.color = "#F87171";
+            } else {
+                toastIcon.className = "fa-solid fa-circle-info";
+                toastIcon.style.color = "#60A5FA";
+            }
+
+            toast.style.display = "flex";
+            setTimeout(() => { toast.style.display = "none"; }, 3500);
+        }
+    </script>
+</body>
+</html>
